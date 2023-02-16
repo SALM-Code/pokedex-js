@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#search-container label {
+    margin-right: 1em;
+}
+
+#search-container input[type="text"] {
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 0.25em;
+    border: none;
+    border-bottom: 2px solid #333;
+}
+
+#search-container button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+#pokedex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pokedex h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#pokedex img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#pokedex p {
+    text-align: center;
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: bold;
+}
