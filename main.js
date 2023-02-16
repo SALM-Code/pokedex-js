@@ -1,7 +1,5 @@
-// URL base de la API de PokeAPI
-const apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
+const URL = 'https://pokeapi.co/api/v2/pokemon/';
 
-// Obtener referencias a los elementos del DOM
 const searchInput = document.getElementById('search');
 const pokedexContainer = document.getElementById('pokedex');
 
@@ -11,16 +9,16 @@ function showError(message) {
 }
 
 // Función para buscar un Pokémon
-async function search() {
+async function searchPokemon() {
     // Obtener el valor del campo de búsqueda y convertirlo a minúsculas
-    const searchQuery = searchInput.value.toLowerCase();
+    const searchedPokemon = searchInput.value.toLowerCase();
 
     try {
         // Realizar una petición a la API de PokeAPI con el nombre del Pokémon
-        const response = await fetch(apiUrl + searchQuery);
+        const response = await fetch(URL + searchedPokemon);
         if (!response.ok) {
             // Si la respuesta no es exitosa, mostrar un mensaje de error
-            showError(`No se encontró ningún Pokémon llamado "${searchQuery}"`);
+            showError(`No se encontró ningún Pokémon llamado "${searchedPokemon}"`);
             return;
         }
 
@@ -28,7 +26,8 @@ async function search() {
         const data = await response.json();
 
         // Mostrar los datos del Pokémon en el contenedor de resultados
-        pokedexContainer.innerHTML = `
+        pokedexContainer.innerHTML = 
+        `
             <h2>${data.name.toUpperCase()}</h2>
             <img src="${data.sprites.front_default}" alt="${data.name}">
             <p>Número: ${data.id}</p>
@@ -43,4 +42,4 @@ async function search() {
 }
 
 // Agregar un controlador de eventos al botón de búsqueda
-document.querySelector('button').addEventListener('click', search);
+document.querySelector('button').addEventListener('click', searchPokemon);
