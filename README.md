@@ -1,4 +1,4 @@
-# JavaScript Pokedex 🤠
+# JavaScript Pokedex
 
 Esta es una Pokedex que cree consumiendo la API de [Pokeapi](https://pokeapi.co/).
 Creada para el tutorial de Pokedex con JavaScript en mi canal de Youtube.
