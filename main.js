@@ -31,8 +31,8 @@ async function searchPokemon() {
             <h2>${data.name.toUpperCase()}</h2>
             <img src="${data.sprites.front_default}" alt="${data.name}">
             <p>Número: ${data.id}</p>
-            <p>Altura: ${data.height}</p>
-            <p>Peso: ${data.weight}</p>
+            <p>Altura: ${data.height / 10}m</p>
+            <p>Peso: ${data.weight / 10}km</p>
         `;
     } catch (error) {
         // Si ocurre algún error durante la petición, mostrar un mensaje de error
